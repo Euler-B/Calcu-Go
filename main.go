@@ -16,12 +16,14 @@ func main() {
 	valores := strings.Split(operacion, "+")
 	//fmt.Println(valores)
 	operador1, err1 := strconv.Atoi(valores[0])
-	if err1 != nil{
-		fmt.Println(err1)
+	operador2, err2 := strconv.Atoi(valores[1])
+
+	if err1 != nil || err2 != nil{
+		fmt.Println("El dato ingresado es incorrecto")
 	} else {
-		fmt.Println(operador1)
+		fmt.Println(operador1 + operador2)
 	}
-	operador2, _ := strconv.Atoi(valores[1])
-	fmt.Println(operador1 + operador2)
+	
+	
 
 }
