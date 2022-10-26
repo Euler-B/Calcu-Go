@@ -10,11 +10,11 @@ import (
 
 type calc struct{}
 
-func (calc) operate (entrada string, operador string) int {
+func (calc) operate(entrada string, operador string) int {
 	entradaLimpia := strings.Split(entrada, operador)
 	operador1 := parsear(entradaLimpia[0])
 	operador2 := parsear(entradaLimpia[1])
-	
+
 	switch operador {
 
 	case "+":
@@ -24,7 +24,7 @@ func (calc) operate (entrada string, operador string) int {
 	case "-":
 		fmt.Println(operador1 - operador2)
 		return operador1 - operador2
-		
+
 	case "*":
 		fmt.Println(operador1 * operador2)
 		return operador1 * operador2
@@ -39,7 +39,7 @@ func (calc) operate (entrada string, operador string) int {
 
 }
 
-func parsear (entrada string) int {
+func parsear(entrada string) int {
 	operador, _ := strconv.Atoi(entrada)
 	return operador
 }
